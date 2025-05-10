@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="font-mono bg-gray-200 dark:bg-[#212124] text-white">
-  <nav class="flex flex-row text-white h-0 opacity-0 duration-1000" id="navbar">
-    <img src="img/tingyun.png" class="ms-10" id="tingyun" alt="">
-    <p class="flex items-center mx-3 lg:text-1xl text-1xl">CLick retract navbar!</p>
-    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-1xl lg:gap-10 ml-auto mx-10 gap-5 font-bold">
+<body class="font-mono bg-white dark:bg-[#1E1E1E] dark:text-white">
+  <nav class="flex flex-row dark:text-white h-0 opacity-0 duration-1000" id="navbar">
+    <img src="img/tingyun.png" class="lg:ms-10 ms-5" id="tingyun" alt="">
+    <p class="flex items-center me-1 lg:text-1xl text-xs">CLick me to retract navbar!</p>
+    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-2xl text-sm lg:gap-10 ml-auto mx-10 gap-5">
       <button onclick="scrollToSection('introduction')">Home</button>
       <button onclick="scrollToSection('aboutme')">About</button>
       <button onclick="scrollToSection('aboutme')">Contacts</button>
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="dark:bg-[#323236] opacity-0 duration-1000 " id="aboutme">
+  <div class="bg-gray-200 dark:bg-[#323236] opacity-0 duration-1000 " id="aboutme">
     <div class="flex lg:flex-row flex-col h-auto lg:p-20 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
         <h1 class="text-5xl">About Me!</h1>
@@ -65,13 +65,17 @@
   
   <script>
     window.addEventListener("DOMContentLoaded", () => {
-      const introduction = document.getElementById('introduction');
-      const navbar = document.getElementById('navbar');
-      const aboutme = document.getElementById('aboutme');
-      navbar.classList.add('h-16');
-      navbar.classList.remove('opacity-0');
-      introduction.classList.add('opacity-100');
-      aboutme.classList.add('opacity-100');
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const introduction = document.getElementById('introduction');
+          const navbar = document.getElementById('navbar');
+          const aboutme = document.getElementById('aboutme');
+          navbar.classList.remove('opacity-0');
+          navbar.classList.add('h-16');
+          introduction.classList.add('opacity-100');
+          aboutme.classList.add('opacity-100');
+        }, 100); // a little delay helps make transitions visible
+      });
     });
     
     const huohuo = document.getElementById('huohuo');
