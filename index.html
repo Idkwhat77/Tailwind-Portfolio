@@ -8,8 +8,8 @@
 <body class="font-mono bg-white dark:bg-[#1E1E1E] dark:text-white">
   <nav class="flex flex-row dark:text-white h-0 opacity-0 duration-1000" id="navbar">
     <img src="img/tingyun.png" class="lg:ms-10 ms-5" id="tingyun" alt="">
-    <p class="flex items-center me-1 lg:text-1xl text-xs">CLick me to retract navbar!</p>
-    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-2xl text-sm lg:gap-10 ml-auto mx-10 gap-5">
+    <p class="flex items-center me-1 lg:text-1xl text-xs text-[#DCDCAA]">CLick me to retract navbar!</p>
+    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-2xl text-sm lg:gap-10 ml-auto mx-10 gap-5 text-[#DCDCAA]">
       <button onclick="scrollToSection('introduction')">Home</button>
       <button onclick="scrollToSection('aboutme')">About</button>
       <button onclick="scrollToSection('aboutme')">Contacts</button>
@@ -19,45 +19,48 @@
     <div class="flex lg:flex-row flex-col h-auto lg:p-24 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <img src="img/huohuo2.png" class="w-auto lg:h-100" id="huohuo" alt="">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-        <h1 class="text-3xl">Welcome! I'm a</h1>
-        <h1 class="text-5xl">Student Majoring in Application Development</h1>
-        <p class="text-xl px-2 lg:px-0">
-          Welcome to my personal portfolio page! Here, you can find information about me and my education, projects, and ect.
+        <h1 class="text-3xl text-[#9CDCFE]">Welcome! I'm a</h1>
+        <h1 class="text-5xl text-[#CE9178] font-bol">Student Majoring in Application Development</h1>
+        <p class="text-xl px-2 lg:px-0 text-[#80B766]">
+          Welcome to my personal portfolio page! Here, you can find information about me and my education, projects, and etc.
         </p>
-        <button class="bg-amber-300 p-3 rounded-2xl text-black font-bold text-2xl hover:bg-amber-400" onclick="scrollToSection('aboutme')">About Me!</button>
+        <button class="bg-[#DCDCAA] p-4 rounded-2xl text-black font-bold text-2xl hover:bg-amber-400 mt-4" onclick="scrollToSection('aboutme')">About Me!</button>
       </div>
     </div>
   </div>
-  <div class="bg-gray-200 dark:bg-[#323236] opacity-0 duration-1000 " id="aboutme">
+  <div class="bg-gray-200 dark:bg-[#212121] opacity-0 duration-1000 " id="aboutme">
     <div class="flex lg:flex-row flex-col h-auto lg:p-20 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-        <h1 class="text-5xl">About Me!</h1>
+        <h1 class="text-5xl text-[#9CDCFE]">About Me!</h1>
         <img src="img/danhengil.png" class="w-auto lg:h-100 lg:hidden" id="huohuo" alt="">
-        <p class="text-xl px-2 lg:px-0">
-          Hello! My name is Exsel Octaviand Gosal and I’m a student majoring in Application Development at Ciputra University, Makassar. My hobbies are playing games and coding random things because I’m really interested in experimenting and trying out new things that I can do. Okay, what else… Oh yeah! I love My Singing Monsters music! I know that sounds weird, but they’re genuinely really catchy and unique! My favourites are Magical Nexus and Ethereal Workshop, the newest songs in the game.
+        <p class="text-md px-2 lg:px-0 text-[#80B766]">
+          Hello! My name is <b>Exsel Octaviand Gosal</b> and I’m a student majoring in Application Development at Ciputra University, Makassar. My hobbies are playing games and coding random things because I’m really interested in experimenting and trying out new things that I can do. Okay, what else… Oh yeah! I love My Singing Monsters music! I know that sounds weird, but they’re genuinely really catchy and unique! My favourites are Magical Nexus and Ethereal Workshop, the newest songs in the game.
         </p>
       </div>
       <img src="img/danhengil.png" class="w-auto lg:h-100 hidden lg:block" id="huohuo" alt="">
     </div>
   </div>
-  <div class="flex lg:flex-row flex-col h-auto text-black lg:p-5 items-center gap-10 bg-white mt-4">   
-    <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-      <h2 class="text-5xl p-4">Education</h2>
-      <div class="flex lg:flex-row flex-col">
-        <img src="img/march.png" class="w-auto lg:h-36 h-24 rounded-3" alt="">
+  <div class="dark:bg-[#212124] flex lg:flex-row flex-col h-auto lg:p-5 items-center" id="education">   
+    <div class="flex flex-col items-center text-center lg:text-left gap-5 w-full">
+      <h1 class="text-5xl text-[#9CDCFE]">Education</h1>
+      <div class="flex lg:flex-row flex-col dark:text-white">
         <div class="flex flex-col gap-2 p-3">
+          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3x">(2011-2020)</h1>
           <h1 class="text-3xl">SD-SMP (Middle School)</h1>
-          <p class="text-2xl">IPEKA Makassar (2011-2020)</p>
+          <p class="text-2xl">IPEKA Makassar</p>
         </div>
-        <img src="img/march.png" class="w-auto lg:h-36 h-24 rounded-3" alt="">
         <div class="flex flex-col gap-2 p-3">
+          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3x">(2020-2024)</h1>
           <h1 class="text-3xl">SMA (High School)</h1>
-          <p class="text-2xl">SMA Zion (2020-2024)</p>
+          <p class="text-2xl">SMA Zion</p>
         </div>
-        <img src="img/march.png" class="w-auto lg:h-36 h-24 rounded-3" alt="">
         <div class="flex flex-col gap-2 p-3">
+          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3x">(2024-2028)</h1>
           <h1 class="text-3xl">University</h1>
-          <p class="text-2xl">UC Makassar (2024-2028)</p>
+          <p class="text-2xl">UC Makassar</p>
         </div>
       </div>
     </div>

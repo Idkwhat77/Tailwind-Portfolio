@@ -260,11 +260,20 @@
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-52 {
+    height: calc(var(--spacing) * 52);
   }
   .h-70 {
     height: calc(var(--spacing) * 70);
@@ -357,6 +366,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#DCDCAA\] {
+    background-color: #DCDCAA;
+  }
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
@@ -429,6 +441,9 @@
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
   .text-center {
     text-align: center;
   }
@@ -481,6 +496,27 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .text-\[\#6A9955\] {
+    color: #6A9955;
+  }
+  .text-\[\#9CDCFE\] {
+    color: #9CDCFE;
+  }
+  .text-\[\#80B766\] {
+    color: #80B766;
+  }
+  .text-\[\#569CD6\] {
+    color: #569CD6;
+  }
+  .text-\[\#CE9178\] {
+    color: #CE9178;
+  }
+  .text-\[\#DCDCAA\] {
+    color: #DCDCAA;
+  }
+  .text-\[bg-\[\#DCDCAA\]\] {
+    color: bg-[#DCDCAA];
   }
   .text-black {
     color: var(--color-black);
@@ -630,6 +666,11 @@
       height: calc(var(--spacing) * 200);
     }
   }
+  .lg\:h-auto {
+    @media (width >= 64rem) {
+      height: auto;
+    }
+  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
@@ -716,6 +757,16 @@
       background-color: #1E1E1E;
     }
   }
+  .dark\:bg-\[\#9CDCFE\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #9CDCFE;
+    }
+  }
+  .dark\:bg-\[\#212121\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #212121;
+    }
+  }
   .dark\:bg-\[\#212124\] {
     @media (prefers-color-scheme: dark) {
       background-color: #212124;
@@ -731,9 +782,19 @@
       background-color: #383838;
     }
   }
+  .dark\:bg-\[\#D4D4D4\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #D4D4D4;
+    }
+  }
   .dark\:bg-\[\#IEIEIE\] {
     @media (prefers-color-scheme: dark) {
       background-color: #IEIEIE;
+    }
+  }
+  .dark\:bg-\[\#\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #;
     }
   }
   .dark\:bg-\[212124\] {
