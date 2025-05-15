@@ -5,58 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="font-mono bg-white dark:bg-[#1E1E1E] dark:text-white">
+<body class="font-mono bg-[#FFFFFF] dark:bg-[#1E1E1E] dark:text-white">
   <nav class="flex flex-row dark:text-white h-0 opacity-0 duration-1000" id="navbar">
     <img src="img/tingyun.png" class="lg:ms-10 ms-5" id="tingyun" alt="">
-    <p class="flex items-center me-1 lg:text-1xl text-xs text-[#DCDCAA]">CLick me to retract navbar!</p>
-    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-2xl text-sm lg:gap-10 ml-auto mx-10 gap-5 text-[#DCDCAA]">
+    <p class="flex items-center me-1 lg:text-1xl text-xs dark:text-[#DCDCAA] text-[#795E26]">CLick me to retract navbar!</p>
+    <div class="flex items-center lg:ml-auto lg:mx-10 lg:text-2xl text-sm lg:gap-10 ml-auto mx-10 gap-5 dark:text-[#DCDCAA] text-[#795E26]">
       <button onclick="scrollToSection('introduction')">Home</button>
       <button onclick="scrollToSection('aboutme')">About</button>
-      <button onclick="scrollToSection('aboutme')">Contacts</button>
+      <button onclick="scrollToSection('education')">Education</button>
+      <button onclick="scrollToSection('skills')">Skills</button>
+      <button onclick="scrollToSection('contacts')">Contacts</button>
     </div> 
   </nav>
-  <div class="dark:bg-[#*212124] opacity-0 duration-1000" id="introduction">
+  <div class="dark:bg-[#1E1E1E] opacity-0 duration-1000" id="introduction">
     <div class="flex lg:flex-row flex-col h-auto lg:p-24 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <img src="img/huohuo2.png" class="w-auto lg:h-100" id="huohuo" alt="">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-        <h1 class="text-3xl text-[#9CDCFE]">Welcome! I'm a</h1>
-        <h1 class="text-5xl text-[#CE9178] font-bol">Student Majoring in Application Development</h1>
-        <p class="text-xl px-2 lg:px-0 text-[#80B766]">
+        <h1 class="text-3xl dark:text-[#9CDCFE] text-[#001080]">Welcome! I'm a</h1>
+        <h1 class="text-5xl dark:text-[#CE9178] text-[#A31515] font-bol">Student Majoring in Application Development</h1>
+        <p class="text-xl px-2 lg:px-0 dark:text-[#80B766] text-[#008000]">
           Welcome to my personal portfolio page! Here, you can find information about me and my education, projects, and etc.
         </p>
-        <button class="bg-[#DCDCAA] p-4 rounded-2xl text-black font-bold text-2xl hover:bg-amber-400 mt-4" onclick="scrollToSection('aboutme')">About Me!</button>
+        <button class="dark:bg-[#DCDCAA] bg-[#795E26] p-4 rounded-2xl text-black font-bold text-2xl hover:bg-amber-400 mt-4" onclick="scrollToSection('aboutme')">About Me!</button>
       </div>
     </div>
   </div>
   <div class="bg-gray-200 dark:bg-[#212121] opacity-0 duration-1000 " id="aboutme">
     <div class="flex lg:flex-row flex-col h-auto lg:p-20 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-        <h1 class="text-5xl text-[#9CDCFE]">About Me!</h1>
+        <h1 class="text-5xl dark:text-[#9CDCFE] text-[#001080]">About Me!</h1>
         <img src="img/danhengil.png" class="w-auto lg:h-100 lg:hidden" id="huohuo" alt="">
-        <p class="text-md px-2 lg:px-0 text-[#80B766]">
+        <p class="text-md px-2 lg:px-0 dark:text-[#80B766] text-[#008000]">
           Hello! My name is <b>Exsel Octaviand Gosal</b> and I’m a student majoring in Application Development at Ciputra University, Makassar. My hobbies are playing games and coding random things because I’m really interested in experimenting and trying out new things that I can do. Okay, what else… Oh yeah! I love My Singing Monsters music! I know that sounds weird, but they’re genuinely really catchy and unique! My favourites are Magical Nexus and Ethereal Workshop, the newest songs in the game.
         </p>
       </div>
       <img src="img/danhengil.png" class="w-auto lg:h-100 hidden lg:block" id="huohuo" alt="">
     </div>
   </div>
-  <div class="dark:bg-[#212124] flex lg:flex-row flex-col h-auto lg:p-5 items-center" id="education">   
-    <div class="flex flex-col items-center text-center lg:text-left gap-5 w-full">
-      <h1 class="text-5xl text-[#9CDCFE]">Education</h1>
-      <div class="flex lg:flex-row flex-col dark:text-white">
-        <div class="flex flex-col gap-2 p-3">
+  <div class="dark:bg-[#1E1E1E] flex lg:flex-row flex-col h-auto lg:p-5 items-center" id="education">   
+    <div class="flex flex-col items-center text-center lg:text-left gap-5 p-5 w-full">
+      <h1 class="text-5xl dark:text-[#9CDCFE] text-[#001080]">Education</h1>
+      <div class="flex lg:flex-row flex-col dark:text-white ">
+        <div class="flex flex-col p-3 items-center">
           <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
-          <h1 class="text-3x">(2011-2020)</h1>
-          <h1 class="text-3xl">SD-SMP (Middle School)</h1>
+          <h1 class="text-3x">(2013-2018)</h1>
+          <h1 class="text-3xl">Elementary School</h1>
           <p class="text-2xl">IPEKA Makassar</p>
         </div>
-        <div class="flex flex-col gap-2 p-3">
+        <div class="flex flex-col p-3 items-center">
           <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
-          <h1 class="text-3x">(2020-2024)</h1>
-          <h1 class="text-3xl">SMA (High School)</h1>
-          <p class="text-2xl">SMA Zion</p>
+          <h1 class="text-3x">(2018-2021)</h1>
+          <h1 class="text-3xl">Junior High School</h1>
+          <p class="text-2xl">IPEKA Makassar</p>
         </div>
-        <div class="flex flex-col gap-2 p-3">
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3x">(2021-2024)</h1>
+          <h1 class="text-3xl">High School</h1>
+          <p class="text-2xl">SMA Zion Makassar</p>
+        </div>
+        <div class="flex flex-col p-3 items-center">
           <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
           <h1 class="text-3x">(2024-2028)</h1>
           <h1 class="text-3xl">University</h1>
@@ -65,7 +73,57 @@
       </div>
     </div>
   </div> 
-  
+  <div class="dark:bg-[#212121] flex lg:flex-row flex-col h-auto lg:p-5 items-center" id="skills">   
+    <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full">
+      <h1 class="text-5xl dark:text-[#9CDCFE] text-[#001080]">Skills</h1>
+      <div class="flex lg:flex-row flex-col dark:text-white gap-5">
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/python.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">Python</h1>
+        </div>
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/java.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">Java</h1>
+        </div>
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/html.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">HTML</h1>
+        </div>
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/css.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">CSS</h1>
+        </div>
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/js.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">JS</h1>
+        </div>
+        <div class="flex flex-col p-3 items-center">
+          <img src="img/mysql.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <h1 class="text-3xl">MySQL</h1>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="dark:bg-[#1E1E1E] flex lg:flex-row flex-col h-auto lg:p-5 items-center" id="projects">   
+    <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full">
+      <h1 class="text-5xl dark:text-[#9CDCFE] text-[#001080]">Projects</h1>
+      <div class="flex flex-wrap justify-center lg:justify-start gap-5 dark:text-white">
+        <a href="https://idkwhat77.github.io" class="bg-white dark:bg-[#2D2D2D] p-5 rounded-2xl shadow-lg w-80">
+          <h2 class="text-3xl font-bold dark:text-[#DCDCAA] text-[#795E26] mb-2">Personal Blog</h2>
+          <p class="text-md dark:text-[#80B766] text-[#008000]">My personal blog. I'll ocasionally write there about projects and other things that I find interesting.</p>
+        </a>
+        <div class="bg-white dark:bg-[#2D2D2D] p-5 rounded-2xl shadow-lg w-80">
+          <h2 class="text-3xl font-bold dark:text-[#DCDCAA] text-[#795E26] mb-2">lorem ipsum</h2>
+          <p class="text-md dark:text-[#80B766] text-[#008000]">lorem ipsum</p>
+        </div>
+        <div class="bg-white dark:bg-[#2D2D2D] p-5 rounded-2xl shadow-lg w-80">
+          <h2 class="text-3xl font-bold dark:text-[#DCDCAA] text-[#795E26] mb-2">lorem ipsum</h2>
+          <p class="text-md dark:text-[#80B766] text-[#008000]">lorem ipsum</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(() => {
