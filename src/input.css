@@ -1,7 +1,59 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+  
+  :root {
+    /* Light mode colors */
+    --lightbg: #F8F9FA;         /* Very light gray - main background */
+    --lightbg-secondary: #E9ECEF;  /* Light gray - for navbar/section backgrounds */
+    --lightbg-tertiary: #FFFFFF;   /* Pure white - for cards/containers */
+    --lighttext-primary: #000000;
+    --lighttext-secondary: #E50000; /* red used for headings and accents */
+    --lighttext-blue: #0000FF; /* blue text */
+    --lighttext-green: #008000; /* green text for paragraphs */
+    --lighttext-brown: #795E26; /* brown/gold text */
+    --lighttext-title: #A31515; /* Used for project titles */
+    --lighttext-code: #098658; /* Used for dates */
+    --lighttext-link-hover: #F59E0B; /* amber-500 for link hover */
+    --light-toggle-bg: #D1D5DB; /* bg-gray-300 */
+    --light-toggle-knob: #FFFFFF; /* toggle switch knob */
+    --light-sun-icon: #F59E0B; /* text-yellow-500 */
+    
+    /* Dark mode colors */
+    --darkbg: #1E1E1E; /* Main dark background */
+    --darkbg-secondary: #212121; /* Secondary dark background */
+    --darkbg-tertiary: #2D2D2D; /* Cards/UI elements background */
+    --darktext-primary: #FFFFFF; /* Basic white text */
+    --darktext-blue: #9CDCFE; /* cblue - used for headings */
+    --darktext-cream: #CE9178; /* cream - used for text */
+    --darktext-green: #80B766; /* commentgreen - used for paragraphs */
+    --darktext-gold: #DCDCAA; /* Used for titles and accents */
+    --darktext-lime: #B5CE9B; /* Used for dates */
+    --darktext-gray: #D1D5DB; /* text-gray-200 for moon icon */
+    --dark-toggle-bg: #2D2D2D; /* Toggle background */
+    --dark-toggle-knob: #1F2937; /* bg-gray-800 toggle switch knob */
+    --dark-link-hover: #FCD34D; /* amber-300 for link hover */
+  }
+  
+  /* Create animation for profile image */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation class */
+  .animate-slide-up {
+    animation: slideUp 1.5s ease-out forwards;
   }
 }

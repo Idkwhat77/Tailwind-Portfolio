@@ -14,10 +14,6 @@
   <link rel="preload" as="image" href="img/huohuo2.png">
 </head>
 <body class="font-mono bg-[var(--lightbg)] dark:bg-[var(--darkbg)] dark:text-[var(--darktext-primary)]">
-
-  <!-- Dark overlay for mobile menu -->
-  <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-500"></div>
-
   <!-- Loading screen -->
   <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-[var(--lightbg)] dark:bg-[var(--darkbg)] transition-opacity duration-500">
     <div class="text-center">
@@ -32,40 +28,15 @@
   <!-- Navbar placeholder - keeps space in document flow -->
   <div id="navbar-placeholder" class="h-16 w-full"></div>
   
-  <!-- Navbar (Desktop) -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex flex-row dark:text-[var(--darktext-primary)] h-0 opacity-100 duration-500 transition-all">
-    <p class="flex items-center ms-20 me-1 lg:text-1xl text-xs dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">CLick me to retract navbar!</p>
-    <div id="" class="lg:flex hidden flex-col lg:flex-row items-center lg:ml-auto lg:mx-10 lg:text-xl text-sm lg:gap-10 gap-5 dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">
-      <button onclick="scrollToSection('introduction')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Home</button>
-      <button onclick="scrollToSection('aboutme')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">About</button>
-      <button onclick="scrollToSection('education')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Education</button>      
-      <button onclick="scrollToSection('skills')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Skills</button>
-      <button onclick="scrollToSection('projects')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Projects</button>
-      <div class="ml-5 relative inline-block w-16 h-8 cursor-pointer" id="themeToggle" aria-label="Toggle dark/light theme">
-        <div class="absolute inset-0 bg-[var(--light-toggle-bg)] dark:bg-[var(--dark-toggle-bg)] rounded-full transition duration-300 ease-in-out">
-          <div class="absolute left-1 top-1 w-6 h-6 bg-[var(--light-toggle-knob)] dark:bg-[var(--dark-toggle-knob)] rounded-full transition-transform duration-300 ease-in-out transform dark:translate-x-8 flex items-center justify-center">
-            <span class="dark:hidden text-[var(--light-sun-icon)]">☀️</span>
-            <span class="hidden dark:block text-[var(--darktext-gray)]">🌙</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="lg:hidden ml-auto me-5" id="burgerBtn" aria-label="Toggle mobile menu">
-      <svg class="w-8 h-8 dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </nav>  
-
-  <!-- Navbar (Mobile) -->
-  <nav id="navbar-mobile" class="fixed top-0 left-0 z-50 bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] dark:text-[var(--darktext-primary)] h-full w-auto duration-500 transform -translate-x-full transition-all lg:hidden">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 z-40 bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] dark:text-[var(--darktext-primary)] h-full w-auto opacity-0 duration-500 transition-all">
     <div id="navLinks" class="flex flex-col p-5 items-center gap-10 dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">
       <button onclick="scrollToSection('introduction')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Home</button>
       <button onclick="scrollToSection('aboutme')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">About</button>
       <button onclick="scrollToSection('education')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Education</button>      
       <button onclick="scrollToSection('skills')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Skills</button>
       <button onclick="scrollToSection('projects')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Projects</button>
-      <div class="relative inline-block w-16 h-8 cursor-pointer" id="themeToggleMobile" aria-label="Toggle dark/light theme">
+      <div class="relative inline-block w-16 h-8 cursor-pointer" id="themeToggle" aria-label="Toggle dark/light theme">
         <div class="absolute inset-0 bg-[var(--light-toggle-bg)] dark:bg-[var(--dark-toggle-bg)] rounded-full transition duration-300 ease-in-out">
           <div class="absolute left-1 top-1 w-6 h-6 bg-[var(--light-toggle-knob)] dark:bg-[var(--dark-toggle-knob)] rounded-full transition-transform duration-300 ease-in-out transform dark:translate-x-8 flex items-center justify-center">
             <span class="dark:hidden text-[var(--light-sun-icon)]">☀️</span>
@@ -75,8 +46,6 @@
       </div>
     </div>
   </nav>  
-
-  <!-- Main content -->
   <div class="dark:bg-[var(--darkbg)] opacity-0 duration-1000" id="introduction">
     <div class="flex lg:flex-row flex-col lg:p-0 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <img src="img/me.png" class="w-auto lg:h-full h-96 rounded-2xl bg-transparent animate-slide-up opacity-0" id="profile-mobile" alt="Profile picture">
@@ -188,31 +157,18 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="dark:text-[var(--darktext-green)] text-[var(--lighttext-green)] text-center p-5 text-sm">
-    &copy; 2025 Exsel Octaviand Gosal. All rights reserved.
-  </footer>
-  
-  <!-- Back to top button -->
-  <button id="backToTop" class="fixed bottom-5 right-5 dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] text-black dark:text-black hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] font-bold p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-    </svg>
-  </button>
-  <script defer>  
-
-    // Loading screen functionality
+  <script defer>    // Wait for DOM to fully load
+      // Loading screen functionality
     window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loading-screen');
-    // Fade out loading screen
-    loadingScreen.style.opacity = '0';
-    // Remove loading screen from DOM after fade out completes
-    setTimeout(() => {
-      loadingScreen.remove();
-    }, 500);
-  });
+      const loadingScreen = document.getElementById('loading-screen');
+      // Fade out loading screen
+      loadingScreen.style.opacity = '0';
+      // Remove loading screen from DOM after fade out completes
+      setTimeout(() => {
+        loadingScreen.remove();
+      }, 500);
+    });
     
-    // Initial opacity for navbar and sections
     document.addEventListener('DOMContentLoaded', () => {
       // Use requestAnimationFrame for smoother transitions
       requestAnimationFrame(() => {
@@ -319,36 +275,14 @@
 
     // Mobile menu toggle
     const burgerBtn = document.getElementById('burgerBtn');
-    const navMobile = document.getElementById('navbar-mobile');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-
+    const navLinks = document.getElementById('navLinks');
+    
     burgerBtn.addEventListener('click', () => {
-      if (navMobile.classList.contains('-translate-x-full')) {
-        // Show mobile navbar and overlay
-        navMobile.classList.remove('-translate-x-full');
-        navMobile.classList.add('translate-x-0');
-        mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
-        mobileOverlay.classList.add('opacity-70', 'pointer-events-auto');
-      } else {
-        // Hide mobile navbar and overlay
-        navMobile.classList.remove('translate-x-0');
-        navMobile.classList.add('-translate-x-full');
-        mobileOverlay.classList.remove('opacity-70', 'pointer-events-auto');
-        mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
-      }
-    });
-
-    // Also close menu when clicking on overlay
-    mobileOverlay.addEventListener('click', () => {
-      navMobile.classList.remove('translate-x-0');
-      navMobile.classList.add('-translate-x-full');
-      mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
-      mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+      navLinks.classList.toggle('hidden');
     });
     
     // Theme toggle with localStorage persistence
     const themeToggle = document.getElementById('themeToggle');
-    const themeToggleMobile = document.getElementById('themeToggleMobile');
     const html = document.documentElement;
     
     // Initialize theme based on saved preference
@@ -358,30 +292,22 @@
       
       // Set theme based on: 1. User preference, 2. System preference
       if (userTheme === 'dark' || (!userTheme && prefersDarkMode)) {
-      html.classList.add('dark');
+        html.classList.add('dark');
       } else {
-      html.classList.remove('dark');
+        html.classList.remove('dark');
       }
     }
     
     // Initialize theme on page load
     initializeTheme();
     
-    // Handle theme toggle click (desktop)
+    // Handle theme toggle click
     themeToggle.addEventListener('click', () => {
       html.classList.toggle('dark');
+      
       // Save preference
       localStorage.setItem('theme', 
-      html.classList.contains('dark') ? 'dark' : 'light'
-      );
-    });
-
-    // Handle theme toggle click (mobile)
-    themeToggleMobile.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      // Save preference
-      localStorage.setItem('theme', 
-      html.classList.contains('dark') ? 'dark' : 'light'
+        html.classList.contains('dark') ? 'dark' : 'light'
       );
     });
     
@@ -415,6 +341,16 @@
         behavior: 'smooth'
       });
     });
-  </script>
+  </script>  <!-- Footer -->
+  <footer class="dark:text-[var(--darktext-green)] text-[var(--lighttext-green)] text-center p-5 text-sm">
+    &copy; 2025 Exsel Octaviand Gosal. All rights reserved.
+  </footer>
+  
+  <!-- Back to top button -->
+  <button id="backToTop" class="fixed bottom-5 right-5 dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] text-black dark:text-black hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] font-bold p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
 </body>
 </html>
