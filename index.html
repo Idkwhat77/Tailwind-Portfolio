@@ -83,14 +83,14 @@
     <div class="flex lg:flex-row flex-col lg:p-0 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <img src="img/me.png" class="w-auto lg:h-full h-96 rounded-2xl bg-transparent animate-slide-down opacity-0" id="profile-mobile" alt="Profile picture">
       <div class="text-center lg:text-left flex flex-col items-center lg:items-start gap-5">
-        <h1 class="text-3xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">Welcome! I'm a</h1>
+        <h1 class="text-3xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] lg:mt-0 mt-3">Welcome! I'm a</h1>
         <h1 class="text-5xl dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)] font-bold">Informatics Student in Application Development</h1>
         <p class="text-xl dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">Welcome to my personal portfolio page! Here, you can find information about me, my education, projects, and more.</p>
         <button class="dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] text-black font-bold text-2xl p-4 rounded-2xl hidden lg:block " onclick="scrollToSection('aboutme')">About Me!</button>
       </div>
     </div>
   </div>
-  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] lg:mt-0 mt-3 opacity-0 duration-1000 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="aboutme">
+  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] lg:pt-0 pt-3 opacity-0 duration-1000 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="aboutme">
     <div class="flex lg:flex-row flex-col h-auto lg:p-16 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
         <h1 class="text-4xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] lg:mb-7"><i class="fa-solid fa-user"></i> About Me!</h1>
@@ -182,39 +182,48 @@
         </div>
       </div>
     </div>
-  </div>   
-  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="projects">   
+  </div>     
+  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500 border-0 border-b-3 border-b-dashed dark:border-b-[#577480] border-b-[var(--lighttext-title)]" id="projects">   
     <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full mb-5">
       <h1 class="text-4xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] lg:mb-5"><i class="fa-solid fa-file-zipper"></i> Projects</h1>
-      <div class="flex flex-wrap justify-center gap-5 dark:text-[var(--darktext-primary)]">
-        <a href="https://idkwhat77.github.io" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/jekull.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+      
+      <!-- Filter buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-5">
+        <button class="project-filter active-filter px-4 py-2 rounded-lg dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] text-black dark:text-black hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] transition-colors" data-filter="all">All</button>
+        <button class="project-filter px-4 py-2 rounded-lg dark:bg-[var(--darkbg-tertiary)] bg-[var(--lightbg-tertiary)] dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)] hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] hover:text-black dark:hover:text-black transition-colors" data-filter="web">Website-Like</button>
+        <button class="project-filter px-4 py-2 rounded-lg dark:bg-[var(--darkbg-tertiary)] bg-[var(--lightbg-tertiary)] dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)] hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] hover:text-black dark:hover:text-black transition-colors" data-filter="CLI">CLI Game</button>
+      </div>
+      
+      <div id="projects-container" class="flex flex-wrap justify-center gap-5 dark:text-[var(--darktext-primary)]">
+        <a href="https://idkwhat77.github.io" class="project-card bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center" data-category="web">
+          <img src="img/jekull.png" class="w-auto h-40 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Personal Blog</h2>
           <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My personal blog. I'll ocasionally write there about projects and other things that I find interesting. Made using Jekyll.</p>
         </a>
-        <a href="https://idkwhat77.github.io/posts/fu-xuan-milkshake/" class="bg-[var(--lightbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 dark:bg-[var(--darkbg-tertiary)] p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/fuxuan.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+        <a href="https://idkwhat77.github.io/posts/fu-xuan-milkshake/" class="project-card bg-[var(--lightbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 dark:bg-[var(--darkbg-tertiary)] p-5 rounded-2xl shadow-lg w-80 text-center items-center" data-category="CLI">
+          <img src="img/fuxuan.png" class="w-auto h-40 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Fu Xuan's Quest for Milkshake</h2>
           <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My first major project about creating a game in python. Visual novel style + Turn Based RPG</p>
         </a>
-        <a href="https://github.com/Idkwhat77/Swing-Layout-Test" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/javaswing.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+        <a href="https://github.com/Idkwhat77/Swing-Layout-Test" class="project-card bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center" data-category="web">
+          <img src="img/javaswing.png" class="w-auto h-40 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">HSR Character UI in Java Swing</h2>
           <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">A website about Honkai: Star Rail made entirely in Java Swing</p>
         </a>
-        <a href="https://idkwhat77.github.io/Figma-Website/" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/figmaweb.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+        <a href="https://idkwhat77.github.io/Figma-Website/" class="project-card bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center" data-category="web">
+          <img src="img/figmaweb.png" class="w-auto h-40 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Quiz Website with Bootstrap CSS</h2>
           <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">Website about quiz playing first made on figma then transferred to HTML and CSS.</p>
         </a>
-        <a href="https://github.com/Idkwhat77/Tailwind-Portfolio" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/tailwind.PNG" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+        <a href="https://github.com/Idkwhat77/Tailwind-Portfolio" class="project-card bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center" data-category="web">
+          <img src="img/tailwind.PNG" class="w-auto h-40 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Tailwind CSS Portfolio</h2>
           <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">This very website you're watching right now!</p>
         </a>
       </div>
     </div>
   </div>
+
   <!-- Footer -->
   <footer class="dark:text-[var(--darktext-green)] text-[var(--lighttext-green)] text-center p-5 text-sm ">
     &copy; 2025 Exsel Octaviand Gosal. All rights reserved.
@@ -433,8 +442,7 @@
           html.classList.remove('dark');
         }
       }
-    });
-    // Back to top button functionality
+    });    // Back to top button functionality
     const backToTopButton = document.getElementById('backToTop');
     
     // Show button when scrolling down past 300px
@@ -451,6 +459,45 @@
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
+      });
+    });
+    
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.project-filter');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      // Add click event to each filter button
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active-filter');
+            btn.classList.remove('dark:bg-[var(--darktext-gold)]', 'bg-[var(--lighttext-brown)]', 'text-black', 'dark:text-black');
+            btn.classList.add('dark:bg-[var(--darkbg-tertiary)]', 'bg-[var(--lightbg-tertiary)]', 'dark:text-[var(--darktext-cream)]', 'text-[var(--lighttext-blue)]');
+          });
+          
+          // Add active class to clicked button
+          button.classList.add('active-filter');
+          button.classList.remove('dark:bg-[var(--darkbg-tertiary)]', 'bg-[var(--lightbg-tertiary)]', 'dark:text-[var(--darktext-cream)]', 'text-[var(--lighttext-blue)]');
+          button.classList.add('dark:bg-[var(--darktext-gold)]', 'bg-[var(--lighttext-brown)]', 'text-black', 'dark:text-black');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          // Filter the projects
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+              // Add fade-in animation
+              card.classList.add('animate-fade-in');
+              setTimeout(() => {
+                card.classList.remove('animate-fade-in');
+              }, 500);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
       });
     });
   </script>
