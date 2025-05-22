@@ -39,6 +39,7 @@
       <button onclick="scrollToSection('introduction')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Home</button>
       <button onclick="scrollToSection('aboutme')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">About</button>
       <button onclick="scrollToSection('education')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Education</button>      
+      <button onclick="scrollToSection('experience')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Experience</button>
       <button onclick="scrollToSection('skills')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Skills</button>
       <button onclick="scrollToSection('projects')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Projects</button>
       <div class="ml-5 relative inline-block w-16 h-8 cursor-pointer" id="themeToggle" aria-label="Toggle dark/light theme">
@@ -62,7 +63,8 @@
     <div id="navLinks" class="flex flex-col p-5 items-center gap-10 dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">
       <button onclick="scrollToSection('introduction')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Home</button>
       <button onclick="scrollToSection('aboutme')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">About</button>
-      <button onclick="scrollToSection('education')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Education</button>      
+      <button onclick="scrollToSection('education')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Education</button>
+      <button onclick="scrollToSection('experience')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Experience</button>      
       <button onclick="scrollToSection('skills')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Skills</button>
       <button onclick="scrollToSection('projects')" class="hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)] transition-colors">Projects</button>
       <div class="relative inline-block w-16 h-8 cursor-pointer" id="themeToggleMobile" aria-label="Toggle dark/light theme">
@@ -77,70 +79,83 @@
   </nav>  
 
   <!-- Main content -->
-  <div class="dark:bg-[var(--darkbg)] opacity-0 duration-1000" id="introduction">
+  <div class="dark:bg-[var(--darkbg)] opacity-0 duration-1000 border-3 border-dashed dark:border-[var(--darkbg)] dark:border-b-[#577480] border-white border-b-[var(--lighttext-title)]" id="introduction">
     <div class="flex lg:flex-row flex-col lg:p-0 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
-      <img src="img/me.png" class="w-auto lg:h-full h-96 rounded-2xl bg-transparent animate-slide-up opacity-0" id="profile-mobile" alt="Profile picture">
+      <img src="img/me.png" class="w-auto lg:h-full h-96 rounded-2xl bg-transparent animate-slide-down opacity-0" id="profile-mobile" alt="Profile picture">
       <div class="text-center lg:text-left flex flex-col items-center lg:items-start gap-5">
         <h1 class="text-3xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">Welcome! I'm a</h1>
         <h1 class="text-5xl dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)] font-bold">Informatics Student in Application Development</h1>
         <p class="text-xl dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">Welcome to my personal portfolio page! Here, you can find information about me, my education, projects, and more.</p>
-        <button class="dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] text-black font-bold text-2xl p-4 rounded-2xl" onclick="scrollToSection('aboutme')">About Me!</button>
+        <button class="dark:bg-[var(--darktext-gold)] bg-[var(--lighttext-brown)] hover:bg-[var(--lighttext-link-hover)] dark:hover:bg-[var(--dark-link-hover)] text-black font-bold text-2xl p-4 rounded-2xl hidden lg:block " onclick="scrollToSection('aboutme')">About Me!</button>
       </div>
     </div>
   </div>
-  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] opacity-0 duration-1000" id="aboutme">
-    <div class="flex lg:flex-row flex-col h-auto lg:p-24 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
+  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] opacity-0 duration-1000 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="aboutme">
+    <div class="flex lg:flex-row flex-col h-auto lg:p-16 p-5 items-center lg:gap-10 gap-2 lg:mx-30">
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-        <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">About Me!</h1>
+        <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] mb-7"><i class="fa-solid fa-user"></i> About Me!</h1>
         <img src="img/huohuo2.png" class="w-auto lg:h-100 lg:hidden" id="huohuo-mobile" alt="Huohuo character">
         <p class="text-md px-2 lg:px-0 dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">
-          Hello! My name is <b>Exsel Octaviand Gosal</b> and I’m a student majoring in Application Development at Ciputra University, Makassar. My hobbies are playing games and coding random things because I’m really interested in experimenting and trying out new things that I can do. Okay, what else… Oh yeah! I love My Singing Monsters music! I know that sounds weird, but they’re genuinely really catchy and unique! My favourites are Magical Nexus and Ethereal Workshop, the newest songs in the game.
+          Hello! My name is <b>Exsel Octaviand Gosal</b> and I’m a student majoring in Application Development at Ciputra University, Makassar. My hobbies are playing games and coding random things because I’m really interested in experimenting and trying out new things that I can do. Okay, what else… Oh yeah! I love My Singing Monsters music! I know that sounds weird, but they’re genuinely really catchy and unique! My favourites are Magical Nexus, Ethereal Workshop, and Plasma Islet, the newest songs in the game.
         </p>
         <div class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] rounded-2xl p-4 w-full lg:w-auto text-left">
           <h2 class="text-2xl font-bold dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] mb-2">Contact Info</h2>
-          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">Email:</strong> swissarchipelago@email.com</p>
-          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">Phone:</strong> +62 856-4159-5368</p>
-          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">Location:</strong> Makassar, Indonesia</p>
-          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">LinkedIn:</strong> <a href="https://linkedin.com/in/exselgosal" class="underline hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)]">linkedin.com/in/exselgosal</a></p>
-          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]">GitHub:</strong> <a href="https://github.com/idkwhat77" class="underline hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)]">github.com/idkwhat77</a></p>
+          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-envelope"></i> Email:</strong> swissarchipelago@email.com</p>
+          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-phone"></i> Phone:</strong> +62 856-4159-5368</p>
+          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-location-dot"></i> Location:</strong> Makassar, Indonesia</p>
+          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-brands fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/exsel-octaviand-gosal-a2143033b/" class="underline hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)]">linkedin.com/in/exsel-octaviand-gosal</a></p>
+          <p class="dark:text-[var(--darktext-cream)] text-[var(--lighttext-blue)]"><strong class="dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-brands fa-github"></i> GitHub:</strong> <a href="https://github.com/idkwhat77" class="underline hover:text-[var(--lighttext-link-hover)] dark:hover:text-[var(--dark-link-hover)]">github.com/idkwhat77</a></p>
         </div>
       </div>
       <img src="img/huohuo2.png" class="w-auto lg:h-100 hidden lg:block" id="huohuo-lg" alt="Huohuo character">
     </div>
   </div>
-  <div class="dark:bg-[var(--darkbg)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500" id="education">   
+  <div class="dark:bg-[var(--darkbg)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500 border-3 border-dashed dark:border-[var(--darkbg)] dark:border-b-[#577480] border-[var(--lightbg)] border-b-[var(--lighttext-title)]" id="education">   
     <div class="flex flex-col items-center text-center lg:text-left gap-5 p-5 w-full">
       <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-graduation-cap"></i> Education</h1>
-      <div class="flex lg:flex-row flex-col dark:text-[var(--darktext-primary)]">
+      <div class="flex lg:flex-row flex-col dark:text-[var(--darktext-primary)] gap-2">
         <div class="flex flex-col p-3 gap-2 items-center">
-          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <img src="img/ipeka.jpg" class="w-auto lg:h-36 h-40 rounded-2xl" alt="">
           <h1 class="text-3x text-[var(--lighttext-code)] dark:text-[var(--darktext-lime)]">(2013-2018)</h1>
           <h1 class="text-3xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">Elementary School</h1>
           <p class="text-2xl">IPEKA Makassar</p>
         </div>
         <div class="flex flex-col p-3 gap-2 items-center">
-          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <img src="img/ipeka.jpg" class="w-auto lg:h-36 h-40 rounded-2xl" alt="">
           <h1 class="text-3x text-[var(--lighttext-code)] dark:text-[var(--darktext-lime)]">(2018-2021)</h1>
-          <h1 class="text-3xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">Junior High School</h1>
+          <h1 class="text-3xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">Middle School</h1>
           <p class="text-2xl">IPEKA Makassar</p>
         </div>
         <div class="flex flex-col p-3 gap-2 items-center">
-          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <img src="img/smazion.jpg" class="w-auto lg:h-36 h-40 rounded-2xl" alt="">
           <h1 class="text-3x text-[var(--lighttext-code)] dark:text-[var(--darktext-lime)]">(2021-2024)</h1>
           <h1 class="text-3xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">High School</h1>
           <p class="text-2xl">SMA Zion Makassar</p>
         </div>
         <div class="flex flex-col p-3 gap-2 items-center">
-          <img src="img/march.png" class="w-auto lg:h-36 h-40 rounded-3" alt="">
+          <img src="img/ucm.jpg" class="w-auto lg:h-36 h-40 rounded-2xl" alt="">
           <h1 class="text-3x text-[var(--lighttext-code)] dark:text-[var(--darktext-lime)]">(2024-2028)</h1>
           <h1 class="text-3xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">University</h1>
           <p class="text-2xl">UC Makassar</p>
         </div>
       </div>
     </div>
-  </div>   <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500" id="skills">   
+  </div>
+  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-100 duration-500 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="experience">   
+    <div class="flex flex-col items-center text-center lg:text-left gap-5 p-5 w-full">
+      <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-exclamation"></i> Experience</h1>
+      <div class="flex lg:flex-row flex-col dark:text-[var(--darktext-primary)]">
+        <div class="flex flex-col p-3 gap-2 items-center">
+          <img src="img/chd.png" class="w-auto lg:h-36 h-40 rounded-2xl" alt="">
+          <h1 class="text-3x text-[var(--lighttext-code)] dark:text-[var(--darktext-lime)]">August 2025</h1>
+          <h1 class="text-2xl dark:text-[var(--darktext-gold)] text-[var(--lighttext-brown)]">Ciputra Humanity Day</h1>
+        </div>
+      </div>
+    </div>
+  </div>      
+  <div class="dark:bg-[var(--darkbg)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500 border-3 border-dashed dark:border-[var(--darkbg)] dark:border-b-[#577480] border-[var(--lightbg)] border-b-[var(--lighttext-title)]" id="skills">   
     <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full">
-      <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-code"></i> Skills</h1>
+      <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] lg:mb-5"><i class="fa-solid fa-code"></i> Skills</h1>
       <div class="flex lg:flex-row flex-col dark:text-[var(--darktext-primary)] gap-10">
         <div class="flex flex-col p-3 items-center bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] rounded-2xl gap-2 shadow-lg">
           <img src="img/python.png" class="w-auto lg:h-24 h-16 rounded-3" alt="">
@@ -167,29 +182,41 @@
         </div>
       </div>
     </div>
-  </div>   <div class="dark:bg-[var(--darkbg)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500" id="projects">   
-    <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full">
-      <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)]"><i class="fa-solid fa-file-zipper"></i> Projects</h1>
-      <div class="flex flex-wrap justify-center lg:justify-start gap-5 dark:text-[var(--darktext-primary)]">
+  </div>   
+  <div class="bg-[var(--lightbg-secondary)] dark:bg-[var(--darkbg-secondary)] flex lg:flex-row flex-col h-auto lg:p-5 items-center opacity-0 duration-500 border-3 border-dashed dark:border-[var(--darkbg-secondary)] dark:border-b-[#577480] border-[var(--lightbg-secondary)] border-b-[var(--lighttext-title)]" id="projects">   
+    <div class="flex flex-col items-center text-center lg:text-left p-5 gap-5 w-full mb-5">
+      <h1 class="text-5xl dark:text-[var(--darktext-blue)] text-[var(--lighttext-secondary)] lg:mb-5"><i class="fa-solid fa-file-zipper"></i> Projects</h1>
+      <div class="flex flex-wrap justify-center gap-5 dark:text-[var(--darktext-primary)]">
         <a href="https://idkwhat77.github.io" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
-          <img src="img/march.png" class="w-auto p-3 rounded-3" alt="">
+          <img src="img/jekull.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Personal Blog</h2>
-          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My personal blog. I'll ocasionally write there about projects and other things that I find interesting.</p>
+          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My personal blog. I'll ocasionally write there about projects and other things that I find interesting. Made using Jekyll.</p>
         </a>
-        <div class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] p-5 rounded-2xl shadow-lg w-80">
+        <a href="https://idkwhat77.github.io/posts/fu-xuan-milkshake/" class="bg-[var(--lightbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 dark:bg-[var(--darkbg-tertiary)] p-5 rounded-2xl shadow-lg w-80 text-center items-center">
+          <img src="img/fuxuan.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
           <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Fu Xuan's Quest for Milkshake</h2>
-          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My first major project about creating a game in python.</p>
-        </div>
-        <div class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] p-5 rounded-2xl shadow-lg w-80">
-          <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">lorem ipsum</h2>
-          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">lorem ipsum</p>
-        </div>
+          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">My first major project about creating a game in python. Visual novel style + Turn Based RPG</p>
+        </a>
+        <a href="https://github.com/Idkwhat77/Swing-Layout-Test" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
+          <img src="img/javaswing.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+          <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">HSR Character UI in Java Swing</h2>
+          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">A website about Honkai: Star Rail made entirely in Java Swing</p>
+        </a>
+        <a href="https://idkwhat77.github.io/Figma-Website/" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
+          <img src="img/figmaweb.png" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+          <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Quiz Website with Bootstrap CSS</h2>
+          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">Website about quiz playing first made on figma then transferred to HTML and CSS.</p>
+        </a>
+        <a href="https://github.com/Idkwhat77/Tailwind-Portfolio" class="bg-[var(--lightbg-tertiary)] dark:bg-[var(--darkbg-tertiary)] hover:scale-105 hover:duration-100 duration-100 p-5 rounded-2xl shadow-lg w-80 text-center items-center">
+          <img src="img/tailwind.PNG" class="w-auto h-42 p-3 rounded-3 items-center flex" alt="">
+          <h2 class="text-3xl font-bold dark:text-[var(--darktext-gold)] text-[var(--lighttext-title)] mb-2">Tailwind CSS Portfolio</h2>
+          <p class="text-md dark:text-[var(--darktext-green)] text-[var(--lighttext-green)]">This very website you're watching right now!</p>
+        </a>
       </div>
     </div>
   </div>
-
   <!-- Footer -->
-  <footer class="dark:text-[var(--darktext-green)] text-[var(--lighttext-green)] text-center p-5 text-sm">
+  <footer class="dark:text-[var(--darktext-green)] text-[var(--lighttext-green)] text-center p-5 text-sm ">
     &copy; 2025 Exsel Octaviand Gosal. All rights reserved.
   </footer>
   
@@ -224,7 +251,8 @@
             'aboutme',
             'skills',
             'projects',
-            'education'
+            'education',
+            'experience'
           ].map(id => document.getElementById(id));
           
           // Ensure navbar and placeholder are properly set
@@ -322,20 +350,30 @@
     const navMobile = document.getElementById('navbar-mobile');
     const mobileOverlay = document.getElementById('mobileOverlay');
 
+    // Open mobile menu
     burgerBtn.addEventListener('click', () => {
-      if (navMobile.classList.contains('-translate-x-full')) {
-        // Show mobile navbar and overlay
-        navMobile.classList.remove('-translate-x-full');
-        navMobile.classList.add('translate-x-0');
-        mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
-        mobileOverlay.classList.add('opacity-70', 'pointer-events-auto');
-      } else {
-        // Hide mobile navbar and overlay
-        navMobile.classList.remove('translate-x-0');
-        navMobile.classList.add('-translate-x-full');
-        mobileOverlay.classList.remove('opacity-70', 'pointer-events-auto');
-        mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
-      }
+      navMobile.classList.remove('-translate-x-full');
+      navMobile.classList.add('translate-x-0');
+      mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      mobileOverlay.classList.add('opacity-70', 'pointer-events-auto');
+    });
+
+    // Close mobile menu when clicking overlay
+    mobileOverlay.addEventListener('click', () => {
+      navMobile.classList.remove('translate-x-0');
+      navMobile.classList.add('-translate-x-full');
+      mobileOverlay.classList.remove('opacity-70', 'pointer-events-auto');
+      mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+    });
+
+    // Close mobile menu when clicking any nav link inside mobile menu
+    document.querySelectorAll('#navbar-mobile button').forEach(btn => {
+      btn.addEventListener('click', () => {
+      navMobile.classList.remove('translate-x-0');
+      navMobile.classList.add('-translate-x-full');
+      mobileOverlay.classList.remove('opacity-70', 'pointer-events-auto');
+      mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+      });
     });
 
     // Also close menu when clicking on overlay
